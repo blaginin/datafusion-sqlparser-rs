@@ -84,4 +84,4 @@ jobs:
         version: 0.14.2
         use-tool-cache: true
     - name: Test
-      run: cargo test --all-features
+      run: cargo test --all-features --no-fail-fast
