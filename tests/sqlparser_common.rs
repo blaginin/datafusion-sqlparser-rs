@@ -12441,8 +12441,6 @@ fn test_reserved_keywords_for_identifiers() {
     dialects.parse_sql_statements(sql).unwrap();
 }
 
-
-
 #[test]
 fn overflow() {
     let expr = std::iter::repeat("1")
@@ -12453,5 +12451,5 @@ fn overflow() {
 
     let mut statements = Parser::parse_sql(&GenericDialect {}, sql.as_str()).unwrap();
     let statement = statements.pop().unwrap();
-    assert_eq!(statement.to_string(), sql);
+    std::assert_eq!(statement.to_string(), sql);
 }
